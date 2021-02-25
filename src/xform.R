@@ -38,6 +38,9 @@ process <- function(x, name) {
 dc <- process(dc, "n_case")
 dd <- process(dd, "n_death")
 
+dc$n_case[dc$n_case < 0] <- na
+dd$n_death[dd$n_death < 0] <- na
+
 message("Most recent date for global data: ", max(dc$date))
 
 # join cases and deaths
