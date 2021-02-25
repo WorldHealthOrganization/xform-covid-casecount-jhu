@@ -38,8 +38,8 @@ process <- function(x, name) {
 dc <- process(dc, "n_case")
 dd <- process(dd, "n_death")
 
-dc$n_case[dc$n_case < 0] <- na
-dd$n_death[dd$n_death < 0] <- na
+dc$n_case[dc$n_case < 0] <- NA
+dd$n_death[dd$n_death < 0] <- NA
 
 message("Most recent date for global data: ", max(dc$date))
 
