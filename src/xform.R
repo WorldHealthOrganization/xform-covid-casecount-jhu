@@ -27,7 +27,7 @@ process <- function(x, name) {
 
   x %>%
     tidyr::pivot_longer(
-      cols = ends_with("20") | ends_with("21") | ends_with("22"),
+      cols = ends_with("20") | ends_with("21") | ends_with("22") | ends_with("23"),
       names_to = "date",
       values_to = name) %>%
     dplyr::rename_all(rnm) %>%
